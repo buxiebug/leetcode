@@ -6,5 +6,5 @@ import (
 
 func main() {
 	//cases.TestLRUCache146()
-	cases.TestBinaryTreeInorderTraversal()
+	cases.TestFlatten()
 }

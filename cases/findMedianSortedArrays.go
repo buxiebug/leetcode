@@ -69,7 +69,8 @@ func findKth(nums1 []int, i int, nums2 []int, j int, k int) int{
 		return nums1[i+k-1]
 	}
 	if k == 1{
-		if nums1[i] < nums2[j] {return nums1[i]} else {return nums2[j]}
+		if nums1[i] < nums2[j] {return nums1[i]} 
+		return nums2[j]
 	}
 	mid1Va1 := math.MaxInt64
 	mid2Va1 := math.MaxInt64
@@ -81,9 +82,8 @@ func findKth(nums1 []int, i int, nums2 []int, j int, k int) int{
 	}
 	if mid1Va1 < mid2Va1 {
 		return findKth(nums1, i+k/2, nums2, j, k - k/2)
-	} else {
-		return findKth(nums1, i, nums2, j+k/2, k - k/2)
-	}
+	} 
+	return findKth(nums1, i, nums2, j+k/2, k - k/2)
 }
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
