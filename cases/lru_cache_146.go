@@ -16,7 +16,7 @@ type Node struct {
 	pre *Node
 }
 
-func Constructor(capacity int) LRUCache{
+func ConstructorLRU(capacity int) LRUCache{
 	head := &Node{
 		key: -1,
 		val: -1,
@@ -100,7 +100,7 @@ func (this *LRUCache) Put(key int, val int) {
 }
 
 func TestLRUCache146() {
-	lru := Constructor(10)
+	lru := ConstructorLRU(10)
 	lru.Put(10, 13)
 	lru.Put(3, 17)
 	lru.Put(6, 11)
